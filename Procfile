@@ -1,1 +1,1 @@
-web: gunicorn udp5wa4cf-tu-django-blog.wsgi
+web: gunicorn codestar.wsgi
