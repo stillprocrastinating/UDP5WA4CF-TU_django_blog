@@ -6,8 +6,19 @@
 ||Slug|SlugField|:white_check_mark:|
 |ForeignKey|Author|User model||
 ||Content|TextField||
-||Created_on|DateTime||
+||Created_on|DateTimeField||
 ||Status|Integer||
 ||Excerpt|TextField||
-||Updated_on|DateTime||
+||Updated_on|DateTimeField||
+
+
+# Comments
+
+|Key|Name|Type|Unique|
+|-|-|-|-|
+|ForeignKey|Post|Post model||
+|ForeignKey|Author|User model||
+||Body|TextField||
+||Approved|BooleanField||
+||Created_on|DateTimeField||
 
