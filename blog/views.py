@@ -4,5 +4,5 @@ from .models import Post
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.all().order_by("created_on")
+    queryset = Post.objects.all().order_by("-created_on")
     template_name = "post_list.html"
