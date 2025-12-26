@@ -1,10 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Post
 
 
-# VIEWS
-
-
-def blog(request):
-    return HttpResponse("Hello, blog!")
+class PostList(generic.ListView):
+    model = Post
 
