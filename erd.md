@@ -22,3 +22,11 @@
 ||Approved|BooleanField||
 ||Created_on|DateTimeField||
 
+
+# About
+
+|Key|Name|Type|Unique|
+|-|-|-|-|
+||Title|CharField||
+||Content|TextField||
+||Updated_on|DateTimeField||

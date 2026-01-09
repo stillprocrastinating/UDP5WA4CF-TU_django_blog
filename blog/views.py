@@ -28,7 +28,6 @@ def post_detail(request, slug):
 
     context = {
         "post": post,
-        "coder": "Matt Rudge"
     }
 
     return render(
