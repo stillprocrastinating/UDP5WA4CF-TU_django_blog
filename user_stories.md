@@ -65,7 +65,7 @@ As a Site User I can modify or delete my comment on a post so that I can be invo
 
 ### Acceptance criteria
 
-:white_square_button: Given a logged in user, they can modify their comment  
+:ballot_box_with_check: Given a logged in user, they can modify their comment  
 :white_square_button: Given a logged in user, they can delete their comment
 
 
