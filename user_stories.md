@@ -122,3 +122,18 @@ As a site admin, I can create or update the "About" page content so that it is a
 ### Acceptance criteria
 
 :ballot_box_with_check: The "About" app is visible in the admin panel.
+
+
+## 12
+
+As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration.
+
+
+## 13
+
+As a Site Owner I can store collaboration requests in the database so that I can review them.
+
+
+## 14
+
+As a Site Owner I can mark collaboration requests as "read" so that I can see how many I still need to process.
