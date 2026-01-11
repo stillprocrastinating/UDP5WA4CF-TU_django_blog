@@ -89,7 +89,7 @@ As a Site Admin I can create draft posts so that I can finish writing the conten
 
 ### Acceptance criteria
 
-:ballot_box_with_check: Given a logged in user, they can save a draft blog post
+:ballot_box_with_check: Given a logged in user, they can save a draft blog post  
 :ballot_box_with_check: Then they can finish the content at a later time
 
 
