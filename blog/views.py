@@ -34,7 +34,7 @@ def post_detail(request, slug):
         print("Recieving POST request...")
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
+            comment = comment_form.save(commit=False)     # load the form in the database for modification
             comment.author = request.user
             comment.post = post
             comment.save()
@@ -44,7 +44,7 @@ def post_detail(request, slug):
                 'Comment submitted and awaiting approval'
             )
 
-    comment_form = CommentForm()
+    comment_form = CommentForm()     # form reset ready for new comment
 
     context = {
         "post": post,
