@@ -15,12 +15,21 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
-    
+
     **Context**
 
     ``post``
         An instance of :model:`blog.Post`.
-    
+
+    ``comments``
+        All approved comments related to the post.
+
+    ``comment_count``
+        A count of approved comments related to the post.
+
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`.
+
     **Template**
 
     :template:`blog/post_detail.html`
@@ -64,8 +73,20 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    View to edit comments
+    Display an individual comment for edit.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+
+    ``comment``
+        A single comment related to the post.
+
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`.
     """
+
     if request.method == "POST":
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -94,8 +115,17 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    View to delete comments
+    Delete an individual comment.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+
+    ``comment``
+        A single comment related to the post.
     """
+
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)

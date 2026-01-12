@@ -5,6 +5,10 @@ from .models import About, CollaborateRequest
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    '''
+    Docstring for AboutAdmin
+    '''
+
     summernote_fields = ('content',)
 
 
@@ -18,4 +22,8 @@ class AboutAdmin(SummernoteModelAdmin):
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
+    '''
+    Docstring for CollaborateRequestAdmin
+    '''
+    
     list_display = ('message', 'read',)
