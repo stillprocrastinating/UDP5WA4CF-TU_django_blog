@@ -41,7 +41,6 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
 
     if request.method == "POST":
-        print("Recieving POST request...")
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)     # load the form in the database for modification
@@ -63,7 +62,6 @@ def post_detail(request, slug):
         "comment_form": comment_form,
     }
 
-    print("Rendering POST request...")
     return render(
         request,
         "blog/post_detail.html",
