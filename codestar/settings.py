@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import dj_database_url
-if os.path.isfile('env.py'):
-    import env
 import os
 from django.contrib.messages import constants as messages
 from pathlib import Path
+if os.path.isfile('env.py'):
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
